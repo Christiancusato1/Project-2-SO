@@ -108,7 +108,7 @@ public class IA extends Thread {
                     ImageIcon img2 = new ImageIcon(pathPersonajesCapcom[i]);
                      main.w.PeleaCapcom.setIcon(img2);
                     main.w.nombrePersonajeCapcom.setText(nombresPersonajesCapcom[i]);
-                    main.w.idPersonajeCapcom.setText("Z"+i);
+                    main.w.idPersonajeCapcom.setText("S"+i);
                     
                     sleep( 60);
                     
@@ -161,6 +161,21 @@ public class IA extends Thread {
 //        this.edo = "Esperando";
 //        main.w.doing.setText(edo);
         Torneo torneo = main.admin.getTorneo();
+        
+        main.w.colaCapcomRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoCapcon()));
+        main.w.colaCapcom1.setText(main.admin.printCola(main.admin.getCola1Capcon()));
+        main.w.colaCapcom2.setText(main.admin.printCola(main.admin.getCola2Capcon()));
+        main.w.colaCapcom3.setText(main.admin.printCola(main.admin.getCola3Capcon()));
+//                main.w.colaCapcomRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoCapcon()));
+
+        main.w.colaNintendoRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoNintendo()));
+        main.w.colaNintendo1.setText(main.admin.printCola(main.admin.getCola1Nintendo()));
+        main.w.colaNintendo2.setText(main.admin.printCola(main.admin.getCola2Nintendo()));
+        main.w.colaNintendo3.setText(main.admin.printCola(main.admin.getCola3Nintendo()));
+        
+        
+        
+        
         String tipoDeTorneo = this.crearTipoDeTorneo();
         
 //        poderCapcom
@@ -310,7 +325,20 @@ public class IA extends Thread {
 
         }
         
+//                main.w.colaCapcomRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoCapcon()));
+                main.w.colaCapcom1.setText(main.admin.printCola(main.admin.getCola1Capcon()));
+                main.w.colaCapcom2.setText(main.admin.printCola(main.admin.getCola2Capcon()));
+                main.w.colaCapcom3.setText(main.admin.printCola(main.admin.getCola3Capcon()));
+//                main.w.colaCapcomRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoCapcon()));
+
+//                main.w.colaNintendoRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoNintendo()));
+                main.w.colaNintendo1.setText(main.admin.printCola(main.admin.getCola1Nintendo()));
+                main.w.colaNintendo2.setText(main.admin.printCola(main.admin.getCola2Nintendo()));
+                main.w.colaNintendo3.setText(main.admin.printCola(main.admin.getCola3Nintendo()));
+                main.admin.colaRefuerzoSubir();
+        
         main.admin.mutex.release();
+//        main.admin.colaRefuerzoSubir();
         return torneo;
     }
 
@@ -351,6 +379,7 @@ public class IA extends Thread {
             if (((Personajes) aux2.getData()).getContadorPrioridad() == 8) {
                 ((Personajes) aux2.getData()).setContadorPrioridad(0);
                 main.admin.getCola1Nintendo().enqueue(aux2.getData());
+//                main.admin.getCola1Nintendo().enqueue(aux2.getData());
 
                 main.admin.getCola2Nintendo().dequeue();
 

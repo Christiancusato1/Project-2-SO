@@ -70,18 +70,18 @@ public class VideoStart extends javax.swing.JFrame  implements ActionListener{
         
     }
     
-//    public void crearPersonajes() throws InterruptedException{
-//             admin.crearPersonajes();
-//            Main.w.colaCapcom1.setText(admin.printCola(admin.getCola1Capcon()));
-//            Main.w.colaCapcom2.setText(admin.printCola(admin.getCola2Capcon()));
-//            Main.w.colaCapcom3.setText(admin.printCola(admin.getCola3Capcon()));
-//            Main.w.colaCapcomRefuerzo.setText(admin.printCola(admin.getColaRefuerzoCapcon()));
-//
-//            Main.w.colaNintendo1.setText(admin.printCola(admin.getCola1Nintendo()));
-//            Main.w.colaNintendo2.setText(admin.printCola(admin.getCola2Nintendo()));
-//            Main.w.colaNintendo3.setText(admin.printCola(admin.getCola3Nintendo()));
-//            Main.w.colaNintendoRefuerzo.setText(admin.printCola(admin.getColaRefuerzoNintendo()));
-//        }
+    public void crearPersonajes() throws InterruptedException{
+             admin.crearPersonajes();
+            Main.w.colaCapcom1.setText(admin.printCola(admin.getCola1Capcon()));
+            Main.w.colaCapcom2.setText(admin.printCola(admin.getCola2Capcon()));
+            Main.w.colaCapcom3.setText(admin.printCola(admin.getCola3Capcon()));
+            Main.w.colaCapcomRefuerzo.setText(admin.printCola(admin.getColaRefuerzoCapcon()));
+
+            Main.w.colaNintendo1.setText(admin.printCola(admin.getCola1Nintendo()));
+            Main.w.colaNintendo2.setText(admin.printCola(admin.getCola2Nintendo()));
+            Main.w.colaNintendo3.setText(admin.printCola(admin.getCola3Nintendo()));
+            Main.w.colaNintendoRefuerzo.setText(admin.printCola(admin.getColaRefuerzoNintendo()));
+        }
     
     private void cerrar() throws InterruptedException{
         this.setVisible(false); 
@@ -103,29 +103,16 @@ public class VideoStart extends javax.swing.JFrame  implements ActionListener{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton1.setText("Start");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, 120, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Purple And Black Neon Minimalist Game On Intro Video.gif"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//       Main.w.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,7 +151,6 @@ public class VideoStart extends javax.swing.JFrame  implements ActionListener{
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
