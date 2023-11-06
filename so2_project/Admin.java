@@ -82,16 +82,18 @@ public class Admin extends Thread{
      }
     
     public void actualizar() throws InterruptedException{
-                
+        
+                main.w.colaCapcomRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoCapcon()));
                 main.w.colaCapcom1.setText(main.admin.printCola(main.admin.getCola1Capcon()));
                 main.w.colaCapcom2.setText(main.admin.printCola(main.admin.getCola2Capcon()));
                 main.w.colaCapcom3.setText(main.admin.printCola(main.admin.getCola3Capcon()));
-                main.w.colaCapcomRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoCapcon()));
+//                main.w.colaCapcomRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoCapcon()));
 
+                main.w.colaNintendoRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoNintendo()));
                 main.w.colaNintendo1.setText(main.admin.printCola(main.admin.getCola1Nintendo()));
                 main.w.colaNintendo2.setText(main.admin.printCola(main.admin.getCola2Nintendo()));
                 main.w.colaNintendo3.setText(main.admin.printCola(main.admin.getCola3Nintendo()));
-                main.w.colaNintendoRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoNintendo()));
+//                main.w.colaNintendoRefuerzo.setText(main.admin.printCola(main.admin.getColaRefuerzoNintendo()));
                 
 //                main.w.ganadorCapcom.setText(main.admin.printCola(main.admin.getGanadoresCapcom()));
 //                main.w.ganadorNintendo.setText(main.admin.printCola(main.admin.getGanadoresNintendo()));
@@ -115,16 +117,16 @@ public class Admin extends Thread{
         double randomValue = random.nextDouble();
         
         if(randomValue<0.4){
-            main.admin.mutex.acquire();
+//            main.admin.mutex.acquire();
             if(!main.admin.colaRefuerzoCapcon.isEmpty()){
                 Node aux=  main.admin.colaRefuerzoCapcon.dequeue();
                 main.admin.cola1Capcon.enqueue(aux.getData());
             }
             
             if (!main.admin.colaRefuerzoNintendo.isEmpty()) {
-                 Node aux1=  main.admin.colaRefuerzoNintendo.dequeue();
-                main.admin.colaRefuerzoNintendo.enqueue(aux1.getData());
-                main.admin.mutex.release();
+                 Node aux2=  main.admin.colaRefuerzoNintendo.dequeue();
+                main.admin.cola1Nintendo.enqueue(aux2.getData());
+//                main.admin.mutex.release();
                 
             }
             

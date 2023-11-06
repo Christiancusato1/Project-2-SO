@@ -13,8 +13,11 @@ import Interfaz.Window;
  */
 public final class Main {
     public static Admin admin= new Admin();
-    public static IA ia= new IA(3);
+    public static IA ia= new IA(10);
     public static Window w;
+
+   
+    
     
     
 
@@ -23,11 +26,12 @@ public final class Main {
      */
     public static void main(String[] args) throws InterruptedException {
         
-//        VideoStart v= new VideoStart();
-//        v.setVisible(true);
+        VideoStart v= new VideoStart();
+        v.setVisible(true);
+
         w  = new Window(); 
-        w.setVisible(true); 
-        
+//        w.setVisible(true); 
+//        w.t1.getText();
 
 //        System.out.println("hola");
 
@@ -35,6 +39,32 @@ public final class Main {
 //        c.setVisible(true); 
         
 
+//        admin.crearPersonajes();
+//        w.colaCapcom1.setText(admin.printCola(admin.getCola1Capcon()));
+//        w.colaCapcom2.setText(admin.printCola(admin.getCola2Capcon()));
+//        w.colaCapcom3.setText(admin.printCola(admin.getCola3Capcon()));
+//        w.colaCapcomRefuerzo.setText(admin.printCola(admin.getColaRefuerzoCapcon()));
+//        
+//        w.colaNintendo1.setText(admin.printCola(admin.getCola1Nintendo()));
+//        w.colaNintendo2.setText(admin.printCola(admin.getCola2Nintendo()));
+//        w.colaNintendo3.setText(admin.printCola(admin.getCola3Nintendo()));
+//        w.colaNintendoRefuerzo.setText(admin.printCola(admin.getColaRefuerzoNintendo()));
+//        
+//        ia.start();
+//        admin.start();
+//        
+        
+        
+//        System.out.println("cree");
+//        System.out.println(admin.getCola1Capcon().getpFirst().getData());
+        
+//       
+        
+        // TODO code application logic here
+    }
+    
+    public static void inicio() throws InterruptedException{
+//         w  = new Window(); 
         admin.crearPersonajes();
         w.colaCapcom1.setText(admin.printCola(admin.getCola1Capcon()));
         w.colaCapcom2.setText(admin.printCola(admin.getCola2Capcon()));
@@ -45,18 +75,9 @@ public final class Main {
         w.colaNintendo2.setText(admin.printCola(admin.getCola2Nintendo()));
         w.colaNintendo3.setText(admin.printCola(admin.getCola3Nintendo()));
         w.colaNintendoRefuerzo.setText(admin.printCola(admin.getColaRefuerzoNintendo()));
-        
         ia.start();
         admin.start();
-//        
         
-        
-//        System.out.println("cree");
-//        System.out.println(admin.getCola1Capcon().getpFirst().getData());
-        
-//       
-        
-        // TODO code application logic here
     }
     
 }
